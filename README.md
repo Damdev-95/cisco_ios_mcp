@@ -8,18 +8,14 @@ git clone https://github.com/Damdev-95/cisco_ios_mcp.git
 cd cisco_ios_mcp
 ```
 
-# Step 2: Set Up a Virtual Environment
-It is best practice in Python to use a virtual environment (venv) to avoid library conflicts with other projects.
-
-
-# Step 3: Install Dependencies
+# Step 2: Install Dependencies
 Use the requirements.txt file 
 
 ```bash
 pip install -r requirements.txt
 ```
 
-# Step 4: Configure Environment Variables
+# Step 3: Configure Environment Variables
 locate the .env, This is where you store sensitive router credentials so they aren't hardcoded in your script.
 
 ```bash
@@ -30,7 +26,7 @@ IOS_PASS=Cisco123
 IOS_SECRET=EnablePassword
 ```
 
-# Step 5: Testing and Debugging
+# Step 4: Testing and Debugging
 
 *  Testing & Debugging (The "Inspector")
 Before connecting to Claude Desktop, use the MCP Inspector. It provides a web interface to test your tools and see the raw router output.
