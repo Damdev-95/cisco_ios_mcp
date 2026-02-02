@@ -1,23 +1,33 @@
 name: Pylint
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        # Use newer Python versions for the latest MCP/Netmiko features
+        python-version: ["3.10", "3.11", "3.12"]
+
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
+        # Caching speeds up your runs by 30-50%
+        cache: 'pip'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
+        # Install pylint and your project requirements
+        pip install pylint netmiko fastmcp python-dotenv
+
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        # Use find to avoid errors if no python files exist, 
+        # and ignore the virtualenv folder if it exists
+        pylint $(find . -name "*.py" -not -path "./venv/*")
