@@ -50,13 +50,7 @@ Add the following block:
   "mcpServers": {
     "cisco-router": {
       "command": "path/python",
-      "args": ["/ABSOLUTE/PATH/TO/main.py"],
-      "env": {
-        "IOS_HOST": "192.168.1.1",
-        "IOS_USER": "admin",
-        "IOS_PASS": "Cisco123",
-        "IOS_SECRET": "EnablePassword"
-      }
+      "args": ["/ABSOLUTE/PATH/TO/main.py"]
     }
   }
 }
