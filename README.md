@@ -33,8 +33,9 @@ Before connecting to Claude Desktop, use the MCP Inspector. It provides a web in
 
 Run the inspector command:
 
-Bash
-mcp dev server.py
+```bash
+mcp dev main.py
+```
 Open your browser to http://localhost:3000.
 
 Try calling the show_ip_route tool to ensure your SSH connection is working.
