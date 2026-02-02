@@ -3,7 +3,7 @@ import os
 import re
 from typing import List, Optional
 from fastmcp import FastMCP
-from netmiko import ConnectHandler, NetmikoAuthenticationException, NetmikoTimeoutException
+from netmiko import ConnectHandler, NetmikoTimeoutException
 from dotenv import load_dotenv
 
 # Load credentials from .env
