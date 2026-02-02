@@ -1,1 +1,13 @@
-
+[MESSAGES CONTROL]
+# C0114: Missing module docstring
+# C0303: Trailing whitespace
+# W0718: Broad exception caught (We use this a lot in Netmiko to catch SSH errors)
+# W0611: Unused import
+disable=
+    C0114,
+    C0303,
+    W0718,
+    W0611,
+    C0115,
+    C0116,
+    C0103
