@@ -19,7 +19,6 @@ pip install -r requirements.txt
 locate the .env, This is where you store sensitive router credentials so they aren't hardcoded in your script.
 
 ```bash
-Code snippet
 IOS_HOST=192.168.1.1
 IOS_USER=admin
 IOS_PASS=Cisco123
