@@ -6,7 +6,7 @@
 
 * Intelligent Discovery: Tools like ping_and_learn_arp allow the AI to actively probe the network to "learn" about connected devices.
 
-* Operational Intelligence: High-level tools for BGP, OSPF, and Routing Table analysis that return structured data for the AI to interpret.
+* Operational Intelligence: High-level tools for BGP, OSPF, and Routing table analysis that return structured data for the AI to interpret.
 
 * Safety Guardrails: A built-in regex-based Security Filter that blocks destructive commands (like reload or erase) before they reach the router.
 
@@ -97,7 +97,7 @@ Type: command
 
 Command: python
 
-Args: ["/path/to/your/server.py"]
+Args: ["/path/to/the/main.py"]
 ```
 
 
@@ -107,7 +107,7 @@ Go to Cursor Settings > General > Features > MCP.
 
 * Click + Add Server.
 * Set the name to Cisco-Router and the type to command.
-* Paste the run command: python /path/to/your/server.py.
+* Paste the run command: `python /path/to/the/main.py`.
 * Restart Cursor. You can now use @Cisco-Router in the chat to trigger network actions.
 
 # 3. Goose
@@ -120,7 +120,7 @@ Go to Cursor Settings > General > Features > MCP.
 extensions:
   cisco-router:
     cmd: python
-    args: ["/absolute/path/to/server.py"]
+    args: ["/absolute/path/to/main.py"]
 ```
 Run goose session. You can use Goose: "Check the interface status on the router," and it will call the Python script.
 
